@@ -132,3 +132,35 @@ duplicate -rr;
 // Result: pSphere6 //
 move -r -0.601166 0 0 ;
 move -r 0.0178893 0 0 ;
+
+// created left arm
+polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+// Result: pCylinder6 polyCylinder4
+move -r 0 2.754125 0 ;
+rotate -r -os -fo 82.721166 0 0 ;
+rotate -r -os -fo 19.243704 0 0 ;
+scale -r 0.341187 0.341187 0.341187 ;
+scale -r 1 2.306521 1 ;
+move -r 0 0 1.33867 ;
+move -r 1.385834 0 0 ;
+rotate -r -os -fo 0 0 -37.262805 ;
+move -r 0 -0.81743 0 ;
+move -r -0.220002 0 0 ;
+move -r 0 0 -0.363331 ;
+move -r 0 -0.386327 0 ;
+move -r 0 0 -0.460281 ;
+move -r -0.373012 0 0 ;
+move -r 0 0.226875 0 ;
+move -r 0 0 -0.218735 ;
+move -r -0.134022 0 0 ;
+
+// created right arm
+select -r pCylinder6 ;
+duplicate -rr;
+// Result: pCylinder7 //
+move -r -1.580796 0 0 ;
+rotate -r -os -fo 0 0 70.915572 ;
+move -r 0.310385 0 0 ;
+move -r -0.0877784 0 0 ;
+rotate -r -os -fo 0 0 4.224965 ;
+move -r 0.022435 0 0 ;
