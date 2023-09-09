@@ -1,201 +1,200 @@
 // created body of bear
-polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
-move -r 0 2.294319 0 ;
-scale -r 1 1.253184 1 ;
-scale -r 1.059036 1 1 ;
-move -r 0 -1.063278 0 ;
+polySphere -radius 1 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
+move -relative 0 2.294319 0 ;
+scale -relative 1 1.253184 1 ;
+scale -relative 1.059036 1 1 ;
+move -relative 0 -1.063278 0 ;
 
 // created left leg
-polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
-rotate -r -os -fo -66.440984 0 0 ;
+polyCylinder -radius 1 -height 2 -subdivisionsX 20 -subdivisionsY 1 -subdivisionsZ 1 -axis 0 1 0 -roundCap 0 -createUVs 3 -constructionHistory 1;
+rotate -relative -objectSpace -forceOrderXYZ -66.440984 0 0 ;
 setAttr "pCylinder1.rotateX" 90;
-scale -r 0.58104 0.58104 0.58104 ;
-scale -r 1 1.459879 1 ;
-move -r 0 0 0.847104 ;
-scale -r 0.577185 0.577185 0.577185 ;
-move -r 0 0 -0.497755 ;
-move -r 0 0.259261 0 ;
-move -r 0.499301 0 0 ;
-rotate -r -os -fo 0 0 -38.106304 ;
-scale -r 1.354731 1.354731 1.354731 ;
-move -r 0 0.280761 0 ;
-move -r 0.0401259 0 0 ;
-scale -r 1 1.16545 1 ;
+scale -relative 0.58104 0.58104 0.58104 ;
+scale -relative 1 1.459879 1 ;
+move -relative 0 0 0.847104 ;
+scale -relative 0.577185 0.577185 0.577185 ;
+move -relative 0 0 -0.497755 ;
+move -relative 0 0.259261 0 ;
+move -relative 0.499301 0 0 ;
+rotate -relative -objectSpace -forceOrderXYZ 0 0 -38.106304 ;
+scale -relative 1.354731 1.354731 1.354731 ;
+move -relative 0 0.280761 0 ;
+move -relative 0.0401259 0 0 ;
+scale -relative 1 1.16545 1 ;
 
 // created right leg
-select -r pCylinder1 ;
-duplicate -rr;
+select -replace pCylinder1 ;
+duplicate -returnRootsOnly;
 // Result: pCylinder2 //
-move -r -1.64699 0 0 ;
-rotate -r -os -fo 0 0 106.558699 ;
-move -r 0.240131 0 0 ;
-rotate -r -os -fo 0 0 -33.897035 ;
-move -r 0.315225 0 0 ;
-scale -r 1 0.975309 1 ;
-move -r 0 0 0.0679289 ;
+move -relative -1.64699 0 0 ;
+rotate -relative -objectSpace -forceOrderXYZ 0 0 106.558699 ;
+move -relative 0.240131 0 0 ;
+rotate -relative -objectSpace -forceOrderXYZ 0 0 -33.897035 ;
+move -relative 0.315225 0 0 ;
+scale -relative 1 0.975309 1 ;
+move -relative 0 0 0.0679289 ;
 
 // created head
-polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+polySphere -radius 1 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
 // Result: pSphere2 polySphere2
-move -r 0 2.85782 0 ;
-scale -r 0.835961 0.835961 0.835961 ;
-move -r 0 -0.127703 0 ;
+move -relative 0 2.85782 0 ;
+scale -relative 0.835961 0.835961 0.835961 ;
+move -relative 0 -0.127703 0 ;
 
 // created left ear
-polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+polyCylinder -radius 1 -height 2 -subdivisionsX 20 -subdivisionsY 1 -subdivisionsZ 1 -axis 0 1 0 -roundCap 0 -createUVs 3 -constructionHistory 1;
 // Result: pCylinder3 polyCylinder2
-move -r 0 4.108513 0 ;
+move -relative 0 4.108513 0 ;
 setAttr "pCylinder3.rotateX" 90;
-scale -r 1 0.142681 1 ;
-scale -r 0.329907 0.329907 0.329907 ;
-move -r 0 -0.632372 0 ;
-move -r 0.642489 0 0 ;
-move -r 0 -0.0871439 0 ;
-move -r 0 0 -0.0281785 ;
-select -r pCylinder3.vtx[40] ;
-move -r 0 0 -0.153219 ;
-move -r 0 0 -0.00859695 ;
-select -d pCylinder3.vtx[40] ;
-move -r -0.0323003 0 0 ;
-move -r 0 -0.0522743 0 ;
-move -r -0.021778 0 0 ;
-move -r 0 0.0291142 0 ;
-move -r 0 -0.0976766 0 ;
-move -r -0.0941467 0 0 ;
-move -r 0 0.205976 0 ;
-move -r 0.0313757 0 0 ;
+scale -relative 1 0.142681 1 ;
+scale -relative 0.329907 0.329907 0.329907 ;
+move -relative 0 -0.632372 0 ;
+move -relative 0.642489 0 0 ;
+move -relative 0 -0.0871439 0 ;
+move -relative 0 0 -0.0281785 ;
+select -replace pCylinder3.vtx[40] ;
+move -relative 0 0 -0.153219 ;
+move -relative 0 0 -0.00859695 ;
+select -deselect pCylinder3.vtx[40] ;
+move -relative -0.0323003 0 0 ;
+move -relative 0 -0.0522743 0 ;
+move -relative -0.021778 0 0 ;
+move -relative 0 0.0291142 0 ;
+move -relative 0 -0.0976766 0 ;
+move -relative -0.0941467 0 0 ;
+move -relative 0 0.205976 0 ;
+move -relative 0.0313757 0 0 ;
 hilite pCylinder3.f[40:59] ;
 selectMode -component ;
-polyExtrudeFacet -constructionHistory 1 -keepFacesTogether 1 -pvx 0.6424889607 -pvy 3.388997159 -pvz 0.01889296067 -divisions 1 -twist 0 -taper 1 -off 0 -thickness 0 -smoothingAngle 30 pCylinder3.f[40:59];
+polyExtrudeFacet -constructionHistory 1 -keepFacesTogether 1 -pivotX 0.6424889607 -pivotY 3.388997159 -pivotZ 0.01889296067 -divisions 1 -twist 0 -taper 1 -off 0 -thickness 0 -smoothingAngle 30 pCylinder3.f[40:59];
 // Result: polyExtrudeFace1
-scale -r -p 0.642489cm 3.388997cm 0.018893cm 0.905009 0.905009 0.905009 ;
-polyExtrudeFacet -constructionHistory 1 -keepFacesTogether 1 -pvx 0.6424889607 -pvy 3.388997257 -pvz 0.01889296067 -divisions 1 -twist 0 -taper 1 -off 0 -thickness 0 -smoothingAngle 30 pCylinder3.f[40:59];
+scale -relative -pivot 0.642489cm 3.388997cm 0.018893cm 0.905009 0.905009 0.905009 ;
+polyExtrudeFacet -constructionHistory 1 -keepFacesTogether 1 -pivotX 0.6424889607 -pivotY 3.388997257 -pivotZ 0.01889296067 -divisions 1 -twist 0 -taper 1 -off 0 -thickness 0 -smoothingAngle 30 pCylinder3.f[40:59];
 // Result: polyExtrudeFace2
-scale -r -p 0.642489cm 3.388997cm 0.018893cm 1 0.77411 1 ;
-move -r 0 0 -0.0452115 ;
+scale -relative -pivot 0.642489cm 3.388997cm 0.018893cm 1 0.77411 1 ;
+move -relative 0 0 -0.0452115 ;
 
 // created right ear
-select -r pCylinder3 ;
-duplicate -rr;
+select -replace pCylinder3 ;
+duplicate -returnRootsOnly;
 // Result: pCylinder4 //
-move -r -1.324341 0 0 ;
-move -r 0.0113544 0 0 ;
+move -relative -1.324341 0 0 ;
+move -relative 0.0113544 0 0 ;
 
 // created mouth
-polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+polySphere -radius 1 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
 // Result: pSphere3 polySphere3
-move -r 0 2.65422 0 ;
-scale -r 0.544073 0.544073 0.544073 ;
-move -r 0 0 0.570157 ;
-scale -r 0.639928 0.639928 0.639928 ;
-scale -r 1.287205 1 1 ;
-move -r 0 0 0.080862 ;
-move -r 0 0.0423663 0 ;
-move -r 0 0 -0.0036949 ;
-move -r 0.0202071 0 0 ;
-move -r 0 0 0.0335526 ;
+move -relative 0 2.65422 0 ;
+scale -relative 0.544073 0.544073 0.544073 ;
+move -relative 0 0 0.570157 ;
+scale -relative 0.639928 0.639928 0.639928 ;
+scale -relative 1.287205 1 1 ;
+move -relative 0 0 0.080862 ;
+move -relative 0 0.0423663 0 ;
+move -relative 0 0 -0.0036949 ;
+move -relative 0.0202071 0 0 ;
+move -relative 0 0 0.0335526 ;
 
 // created nose
-polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+polySphere -radius 1 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
 // Result: pSphere4 polySphere4
-move -r 0 3.016181 0 ;
-scale -r 0.300128 0.300128 0.300128 ;
-move -r 0 0 0.964937 ;
-scale -r 1 0.520162 1 ;
-scale -r 1 1 0.393965 ;
-scale -r 0.586746 0.586746 0.586746 ;
-move -r 0 -0.0902506 0 ;
-move -r 0 0 -0.0519513 ;
-move -r 0.0131164 0 0 ;
+move -relative 0 3.016181 0 ;
+scale -relative 0.300128 0.300128 0.300128 ;
+move -relative 0 0 0.964937 ;
+scale -relative 1 0.520162 1 ;
+scale -relative 1 1 0.393965 ;
+scale -relative 0.586746 0.586746 0.586746 ;
+move -relative 0 -0.0902506 0 ;
+move -relative 0 0 -0.0519513 ;
+move -relative 0.0131164 0 0 ;
 
 // created left eye
-polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+polySphere -radius 1 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
 // Result: pSphere5 polySphere5
-move -r 0 2.875458 0 ;
-scale -r 0.248146 0.248146 0.248146 ;
-move -r 0 0 1.01145 ;
-move -r 0.448271 0 0 ;
-move -r 0 0.219047 0 ;
-scale -r 0.505108 0.505108 0.505108 ;
-move -r 0 0 -0.478681 ;
-move -r -0.114673 0 0 ;
-move -r 0 0 0.0307127 ;
-move -r 0 0 0.0528253 ;
-move -r -0.0215712 0 0 ;
-select -r pSphere5 ;
-select -r pSphere5.f[0:159] pSphere5.f[360:379] ;
-scale -r -p 0.312026cm 3.022032cm 0.616307cm 1 0.400299 1 ;
+move -relative 0 2.875458 0 ;
+scale -relative 0.248146 0.248146 0.248146 ;
+move -relative 0 0 1.01145 ;
+move -relative 0.448271 0 0 ;
+move -relative 0 0.219047 0 ;
+scale -relative 0.505108 0.505108 0.505108 ;
+move -relative 0 0 -0.478681 ;
+move -relative -0.114673 0 0 ;
+move -relative 0 0 0.0307127 ;
+move -relative 0 0 0.0528253 ;
+move -relative -0.0215712 0 0 ;
+select -replace pSphere5 ;
+select -replace pSphere5.f[0:159] pSphere5.f[360:379] ;
+scale -relative -p 0.312026cm 3.022032cm 0.616307cm 1 0.400299 1 ;
 
 // created right eye
-select -r pSphere5 ;
-duplicate -rr;
+select -replace pSphere5 ;
+duplicate -returnRootsOnly;
 // Result: pSphere6 //
-move -r -0.601166 0 0 ;
-move -r 0.0178893 0 0 ;
+move -relative -0.601166 0 0 ;
+move -relative 0.0178893 0 0 ;
 
 // created left arm
-polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+polyCylinder -radius 1 -height 2 -subdivisionsX 20 -subdivisionsY 1 -subdivisionsZ 1 -axis 0 1 0 -roundCap 0 -createUVs 3 -constructionHistory 1;
 // Result: pCylinder6 polyCylinder4
-move -r 0 2.754125 0 ;
-rotate -r -os -fo 82.721166 0 0 ;
-rotate -r -os -fo 19.243704 0 0 ;
-scale -r 0.341187 0.341187 0.341187 ;
-scale -r 1 2.306521 1 ;
-move -r 0 0 1.33867 ;
-move -r 1.385834 0 0 ;
-rotate -r -os -fo 0 0 -37.262805 ;
-move -r 0 -0.81743 0 ;
-move -r -0.220002 0 0 ;
-move -r 0 0 -0.363331 ;
-move -r 0 -0.386327 0 ;
-move -r 0 0 -0.460281 ;
-move -r -0.373012 0 0 ;
-move -r 0 0.226875 0 ;
-move -r 0 0 -0.218735 ;
-move -r -0.134022 0 0 ;
+move -relative 0 2.754125 0 ;
+rotate -relative -objectSpace -forceOrderXYZ 82.721166 0 0 ;
+rotate -relative -objectSpace -forceOrderXYZ 19.243704 0 0 ;
+scale -relative 0.341187 0.341187 0.341187 ;
+scale -relative 1 2.306521 1 ;
+move -relative 0 0 1.33867 ;
+move -relative 1.385834 0 0 ;
+rotate -relative -objectSpace -forceOrderXYZ 0 0 -37.262805 ;
+move -relative 0 -0.81743 0 ;
+move -relative -0.220002 0 0 ;
+move -relative 0 0 -0.363331 ;
+move -relative 0 -0.386327 0 ;
+move -relative 0 0 -0.460281 ;
+move -relative -0.373012 0 0 ;
+move -relative 0 0.226875 0 ;
+move -relative 0 0 -0.218735 ;
+move -relative -0.134022 0 0 ;
 
 // created right arm
-select -r pCylinder5 ;
-duplicate -rr;
+select -replace pCylinder5 ;
+duplicate -returnRootsOnly;
 // Result: pCylinder7 //
-move -r -1.580796 0 0 ;
-rotate -r -os -fo 0 0 70.915572 ;
-move -r 0.310385 0 0 ;
-move -r -0.0877784 0 0 ;
-rotate -r -os -fo 0 0 4.224965 ;
-move -r 0.022435 0 0 ;
+move -relative -1.580796 0 0 ;
+rotate -relative -objectSpace -forceOrderXYZ 0 0 70.915572 ;
+move -relative 0.310385 0 0 ;
+move -relative -0.0877784 0 0 ;
+rotate -relative -objectSpace -forceOrderXYZ 0 0 4.224965 ;
+move -relative 0.022435 0 0 ;
 
 // created bowtie
-polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+polySphere -radius 1 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
 // Result: pSphere7 polySphere6
-move -r 0 2.078457 0 ;
-move -r 0 0 1.05925 ;
-scale -r 0.183676 0.183676 0.183676 ;
-scale -r 1 1 0.540182 ;
-scale -r 1 0.785058 1 ;
-scale -r 1 1 0.696713 ;
-move -r 0 0 -0.226482 ;
-rotate -r -os -fo -17.958833 0 0 ;
-move -r 0 0 -0.105057 ;
-move -r 0 0.0633034 0 ;
-polyCone -r 1 -h 2 -sx 20 -sy 1 -sz 0 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+move -relative 0 2.078457 0 ;
+move -relative 0 0 1.05925 ;
+scale -relative 0.183676 0.183676 0.183676 ;
+scale -relative 1 1 0.540182 ;
+scale -relative 1 0.785058 1 ;
+scale -relative 1 1 0.696713 ;
+move -relative 0 0 -0.226482 ;
+rotate -relative -objectSpace -forceOrderXYZ -17.958833 0 0 ;
+move -relative 0 0 -0.105057 ;
+move -relative 0 0.0633034 0 ;
+polyCone -radius 1 -height 2 -subdivisionsX 20 -subdivisionsY 1 -subdivisionsZ 0 -axis 0 1 0 -roundCap 0 -createUVs 3 -constructionHistory 1;
 // Result: pCone1 polyCone1
-move -r 0 0 1.104295 ;
-move -r 0 2.178049 0 ;
-scale -r 0.21876 0.21876 0.21876 ;
-scale -r 1 1 0.27989 ;
-scale -r 1 0.69034 1 ;
-rotate -r -os -fo 0 0 92.474724 ;
-move -r 0 0 -0.381433 ;
-move -r 0.241864 0 0 ;
-rotate -r -os -fo 0 20.372155 0 ;
+move -relative 0 0 1.104295 ;
+move -relative 0 2.178049 0 ;
+scale -relative 0.21876 0.21876 0.21876 ;
+scale -relative 1 1 0.27989 ;
+scale -relative 1 0.69034 1 ;
+rotate -relative -objectSpace -forceOrderXYZ 0 0 92.474724 ;
+move -relative 0 0 -0.381433 ;
+move -relative 0.241864 0 0 ;
+rotate -relative -objectSpace -forceOrderXYZ 0 20.372155 0 ;
 // Undo: rotate -r -os -fo 0 20.372155 0 
 // Redo: rotate -r -os -fo 0 20.372155 0 
-move -r 0 -0.0488271 0 ;
-rotate -r -os -fo 5.555492 0 0 ;
-rotate -r -os -fo 0 6.619776 0 ;
-duplicate -rr;
+move -relative 0 -0.0488271 0 ;
+rotate -relative -objectSpace -forceOrderXYZ 5.555492 0 0 ;
+rotate -relative -objectSpace -forceOrderXYZ 0 6.619776 0 ;
+duplicate -returnRootsOnly;
 // Result: pCone2 //
-move -r -0.478944 0 0 ;
-rotate -r -os -fo 0 0 182.513325 ;
-
+move -relative -0.478944 0 0 ;
+rotate -relative -objectSpace -forceOrderXYZ 0 0 182.513325 ;
