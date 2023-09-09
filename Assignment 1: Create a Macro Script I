@@ -155,7 +155,7 @@ move -r 0 0 -0.218735 ;
 move -r -0.134022 0 0 ;
 
 // created right arm
-select -r pCylinder6 ;
+select -r pCylinder5 ;
 duplicate -rr;
 // Result: pCylinder7 //
 move -r -1.580796 0 0 ;
@@ -164,3 +164,38 @@ move -r 0.310385 0 0 ;
 move -r -0.0877784 0 0 ;
 rotate -r -os -fo 0 0 4.224965 ;
 move -r 0.022435 0 0 ;
+
+// created bowtie
+polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+// Result: pSphere7 polySphere6
+move -r 0 2.078457 0 ;
+move -r 0 0 1.05925 ;
+scale -r 0.183676 0.183676 0.183676 ;
+scale -r 1 1 0.540182 ;
+scale -r 1 0.785058 1 ;
+scale -r 1 1 0.696713 ;
+move -r 0 0 -0.226482 ;
+rotate -r -os -fo -17.958833 0 0 ;
+move -r 0 0 -0.105057 ;
+move -r 0 0.0633034 0 ;
+polyCone -r 1 -h 2 -sx 20 -sy 1 -sz 0 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+// Result: pCone1 polyCone1
+move -r 0 0 1.104295 ;
+move -r 0 2.178049 0 ;
+scale -r 0.21876 0.21876 0.21876 ;
+scale -r 1 1 0.27989 ;
+scale -r 1 0.69034 1 ;
+rotate -r -os -fo 0 0 92.474724 ;
+move -r 0 0 -0.381433 ;
+move -r 0.241864 0 0 ;
+rotate -r -os -fo 0 20.372155 0 ;
+// Undo: rotate -r -os -fo 0 20.372155 0 
+// Redo: rotate -r -os -fo 0 20.372155 0 
+move -r 0 -0.0488271 0 ;
+rotate -r -os -fo 5.555492 0 0 ;
+rotate -r -os -fo 0 6.619776 0 ;
+duplicate -rr;
+// Result: pCone2 //
+move -r -0.478944 0 0 ;
+rotate -r -os -fo 0 0 182.513325 ;
+
