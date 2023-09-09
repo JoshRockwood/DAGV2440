@@ -80,3 +80,55 @@ duplicate -rr;
 // Result: pCylinder4 //
 move -r -1.324341 0 0 ;
 move -r 0.0113544 0 0 ;
+
+// created mouth
+polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+// Result: pSphere3 polySphere3
+move -r 0 2.65422 0 ;
+scale -r 0.544073 0.544073 0.544073 ;
+move -r 0 0 0.570157 ;
+scale -r 0.639928 0.639928 0.639928 ;
+scale -r 1.287205 1 1 ;
+move -r 0 0 0.080862 ;
+move -r 0 0.0423663 0 ;
+move -r 0 0 -0.0036949 ;
+move -r 0.0202071 0 0 ;
+move -r 0 0 0.0335526 ;
+
+// created nose
+polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+// Result: pSphere4 polySphere4
+move -r 0 3.016181 0 ;
+scale -r 0.300128 0.300128 0.300128 ;
+move -r 0 0 0.964937 ;
+scale -r 1 0.520162 1 ;
+scale -r 1 1 0.393965 ;
+scale -r 0.586746 0.586746 0.586746 ;
+move -r 0 -0.0902506 0 ;
+move -r 0 0 -0.0519513 ;
+move -r 0.0131164 0 0 ;
+
+// created left eye
+polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+// Result: pSphere5 polySphere5
+move -r 0 2.875458 0 ;
+scale -r 0.248146 0.248146 0.248146 ;
+move -r 0 0 1.01145 ;
+move -r 0.448271 0 0 ;
+move -r 0 0.219047 0 ;
+scale -r 0.505108 0.505108 0.505108 ;
+move -r 0 0 -0.478681 ;
+move -r -0.114673 0 0 ;
+move -r 0 0 0.0307127 ;
+move -r 0 0 0.0528253 ;
+move -r -0.0215712 0 0 ;
+select -r pSphere5 ;
+select -r pSphere5.f[0:159] pSphere5.f[360:379] ;
+scale -r -p 0.312026cm 3.022032cm 0.616307cm 1 0.400299 1 ;
+
+// created right eye
+select -r pSphere5 ;
+duplicate -rr;
+// Result: pSphere6 //
+move -r -0.601166 0 0 ;
+move -r 0.0178893 0 0 ;
