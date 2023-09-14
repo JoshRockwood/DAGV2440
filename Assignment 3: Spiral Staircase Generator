@@ -1,0 +1,22 @@
+global proc createSpiralStaircase (int $numStairs, float $stairLength, float $stairWidth, float $stairHeight, float $pivotOffset, float $stepHeight, float $stepRotation)
+{
+    float $angleIncrement = 360.0 / $numStairs;
+    string $staircaseGroup = `group -empty -name "spiralStaircase"`;
+
+    for ($i = 0; $i < $numStairs; $i++)
+    {   
+        float $angle = $i *  $angleIncrement + $stepRotation;
+
+        float $x = $stairLength * cos(deg_to_rad($angle));
+        float $y = $stairLength * sin(deg_to_rad($angle));
+        float $z = $i * $stepHeight;
+
+        string $stair = `polyCube -width $stairWidth -depth $stairLength -height $stairHeight -name ("stair_" + string($i))`;
+        xform -translation ($x + $pivotOffset) $y $z $stair;
+
+        parent $stair $staircaseGroup;
+    }
+    xform -centerPivots $staircaseGroup;
+}
+
+createSpiralStaircase (15, 3, 6, 0.8, 0.5, 0.8, 25);
